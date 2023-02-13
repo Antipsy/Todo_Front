@@ -47,7 +47,7 @@ const EventAdmin = (props: { id:string}) => {
         <div className='auth-wrapper'>
         <div className="auth-inner">
         <div className = "container">
-            <h2 className = "text-center"> List des Evenements </h2>
+            <h2 className = "text-center"> List des Todos </h2>
             <Link to = "/addtodo" className = "btn btn-success mb-2" > créer Todo </Link>
             <table className="table table-bordered ">
                 <thead>

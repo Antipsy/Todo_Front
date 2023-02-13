@@ -70,7 +70,7 @@ const AddTodos = (props: { idu:string}) => {
                         
                             <form>
                                 <div className = "form-group">
-                                <label className = "form-label">  Todo :</label>
+                                
                                 
                                     <label className = "form-label">  Title :</label>
                                     <input
