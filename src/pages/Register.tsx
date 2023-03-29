@@ -6,7 +6,10 @@ const Register = () => {
     const [prenom, setPrenom] = useState('');
     const [email, setEmail] = useState('');
     const [password,setPassword] = useState('');
-   
+    const [dateN,setDate] = useState('');
+    const [genre,setGenre] = useState('');
+    const [photo, setPhoto] = useState('');
+    const [cv, setCv] = useState('');
     const [redirect, setRedirect] = useState(false);
 
     const submit = async (e: SyntheticEvent) => {
@@ -19,7 +22,11 @@ const Register = () => {
                 nom,
                 prenom,
                 email,
-                password
+                dateN,
+                genre,
+                password,
+                photo,
+                cv
             })
         });
 
@@ -28,9 +35,10 @@ const Register = () => {
     if (redirect) {
         return <Navigate to="/login"/>;
     }
-       
+    
 
     return (
+        
         <div className= "sides">
             <div className='left-side'>
                 <div className='imag-side'></div>
@@ -51,6 +59,19 @@ const Register = () => {
                     onChange={e => setPrenom(e.target.value)}/>
 
                 </div>
+                <div className="form-group">
+					<label> Date de naissance </label> 
+                    <input type="date" className="form-control" 
+                    onChange={e => setDate(e.target.value)}/>
+				</div>
+                <div className="form-groupe">
+                    <label> Genre </label>
+                    <select className="form-control" onChange={e => setGenre(e.target.value)}> 
+                    <option value="">--Veuillez choisir--</option>  
+                    <option value="Homme">Homme</option>
+                    <option value="Femme">Femme</option>
+                    </select>
+                </div>
                 <div className="form-groupe">
                     <label>Email</label>
                     <input type="email" className="form-control" placeholder="Email" 
@@ -65,7 +86,24 @@ const Register = () => {
 
                 </div>
                 
-                <button className="w-100 btn btn-lg btn-success" type="submit">Sign Up</button>
+                <div className="form-groupe">
+                    <label>Photo</label><br></br>
+                    <input type="file" value={photo}
+                    accept="image/png, image/jpeg"
+                    onChange={(e) => setPhoto(e.target.value)}/>
+
+                </div>
+
+                <div className="form-groupe">
+                    <label>CV</label><br></br>
+                    <input type="file" value={cv}
+                    accept="image/png, image/jpeg" 
+                    onChange={(e) => setCv(e.target.value)}/>
+    
+
+                </div>
+                <br></br>
+                <button className="w-100 btn btn-lg btn-success colorB" type="submit">Sign Up</button>
             </form>
             </div>
             </div>

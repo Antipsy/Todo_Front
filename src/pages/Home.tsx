@@ -10,11 +10,11 @@ const Home = (props: { nom: string ,prenom:string,id:string}) => {
             <div className="right-side" style={{textAlign:'center'}}>
             <div className='cdg-img' style={{height:'300px'}}></div>
             <h2>
-            {props.id? 'Welcome ' + props.prenom+' '+props.nom  : 'Nous avons crée un site web qui permet de creer des todos'}
+            {props.id? 'Welcome ' + props.prenom+' '+props.nom  : 'Bienvenu sur notre site 4D'}
             
             </h2>
             <p>
-            {props.id? '': 'Veuillez vous authentifier pour creer votre todos'}</p>
+            {props.id? '': 'Veuillez vous remplir la formulaire'}</p>
             </div>
         </div>
         

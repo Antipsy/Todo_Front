@@ -5,8 +5,7 @@ import Nav from "./components/Nav";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Home from "./pages/Home";
 import Register from "./pages/Register";
-import AddTodos from './pages/AddTodos';
-import Todo from './pages/Todo';
+
 
 function App() {
     const [nom, setNom] = useState('');
@@ -41,10 +40,7 @@ function App() {
                 <Nav nom={nom} setNom={setNom} id={id} setId={setId} role={role} setRole={setRole} prenom={prenom} setPrenom={setPrenom}/>
                 
                 <Routes>
-
-                    <Route path = "/userTodo" element={<Todo id={id}/>}></Route>
-                    <Route path = "/addtodo" element={<AddTodos idu={id}/>}></Route>
-                    <Route path = "/edit-todo/:id" element={<AddTodos idu={id}/>}></Route>
+             
                     <Route path = "/" element={<Home nom={nom} prenom={prenom} id={id}/>}></Route>
                     <Route path = "/login" element={<Login setNom={setNom} setId={setId} setRole={setRole} setPrenom={setPrenom}/>}></Route>
                     <Route path = "/register" element={<Register/>}></Route>

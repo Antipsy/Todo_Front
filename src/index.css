@@ -3,13 +3,15 @@
   box-sizing: border-box;
 }
 body{
-  background: #0288d1
+  background: #535fd3
   !important;
   
   display: flex;
   font-weight: 400;
   font-family: 'Fira Sans', sans-serif;
 }
+.colorB{background-color:#004487 !important;
+  border-color: #004487!important;}
 h1,h2,h3,h4,h5,h6,label,span{
   font-weight: 500;
   font-family: 'Fira Sans', sans-serif;
@@ -32,9 +34,10 @@ float: left;
 }
 .imag-side{
   
-  background: center/cover url("img/wassim.png") no-repeat;
+  background: center/cover url("img/societe.jpg") no-repeat;
   height: 100%;
-  background-size: contain;
+  
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -89,7 +92,7 @@ td,th,table,tr{
   color: #ffffff;
 }
 .row{
-  color:#2E3740;
+  color:#004388;
   text-align: left;
 }
 .auth-wrapper .form-control:focus {

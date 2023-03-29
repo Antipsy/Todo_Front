@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import {Link} from "react-router-dom";
-import logo from '../img/logoN.png';
+import logo from '../img/logo.png';
 import {
     AppBar,
     Button,
@@ -100,7 +100,7 @@ const Nav = (props: { nom: string, setNom: (nom: string) => void ,id: string,set
   console.log(isMatch);
     return (
         <React.Fragment>
-      <AppBar sx={{ background: "#39444f" }}>
+      <AppBar sx={{ background: "#004487" }}>
         <Toolbar>
           <Link to={`/`}><img src={logo} height="30" width="auto" /></Link>
           {isMatch ? (

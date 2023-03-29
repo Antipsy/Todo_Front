@@ -41,15 +41,15 @@ const Login = (props: { setNom: (nom: string) => void ,setId: (id: string) => vo
         <form onSubmit={submit}>
             <h3>Login</h3>
             <label> Email </label>
-            <input type="email" className="form-control" placeholder="Email address" required
+            <input type="email" className="form-control" placeholder="Email" required
                    onChange={e => setEmail(e.target.value)}
             />
             <label> Password </label>
             <input type="password" className="form-control" placeholder="Password" required
                    onChange={e => setPassword(e.target.value)}
             />
-
-            <button className="w-100 btn btn-lg btn-success" type="submit">Sign in</button>
+            <br></br>
+            <button className="w-100 btn btn-lg btn-success colorB" type="submit">Sign in</button>
         </form>
         </div>
         </div>
